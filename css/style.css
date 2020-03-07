@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
     margin: 0 !important;
     background-color: #1e272e;
     -webkit-user-select: none;
+    font-family: 'Roboto';
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 input[type=file] {
@@ -18,7 +28,7 @@ input[type=file]::-webkit-file-upload-button {
 
 input[type=file]::before {
     content: 'Select file';
-    color: black;
+    color: #000;
     display: inline-block;
     background-color: #0fbcf9;
     width: 115px;
@@ -32,4 +42,62 @@ input[type=file]::before {
     font-weight: 700;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
     font-size: 1.5rem;
+}
+
+section#word {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 100vh;
+    color: #fff;
+    display: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, #2ecc71 0%, #fff 0%);
+}
+
+section#sentence {
+    position: absolute;
+    top: calc(100vh - 60px);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section#sentence div.letter {
+    width: 50px;
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0);
+    margin-right: 6px;
+    border-bottom: 2px solid #fff;
+    transition: color .2s ease, border .2s ease;
+}
+
+section#sentence div.letter:last-child {
+    margin: 0;
+}
+
+section#correctBar {
+    flex-direction: row;
+    width: 100vw;
+    height: 40px;
+    display: none;
+    overflow: hidden;
+}
+
+section#correctBar div.bar {
+    width: 50%;
+    height: 6px;
+    line-height: 35px;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
 }

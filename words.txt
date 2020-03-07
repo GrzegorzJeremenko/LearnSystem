@@ -3,3 +3,6 @@ lampa lamp
 tata father
 mama mother
 komputer computer
+telefon phone
+Chrzest_Polski 966
+bitwa_pod_gruniem 1410
