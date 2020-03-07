@@ -5,8 +5,6 @@ let point = 0, mis = 0;
 
 let correctBar = 100, misBar = 0;
 
-setInterval(progressUpdate, 2);
-
 document.querySelector("#fileInput").addEventListener('change', function() {
     let all_files = this.files;
     
